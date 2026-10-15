@@ -24,7 +24,7 @@
 | 11 | `benchmark/PROMPTS.md` LLM prompt templates | ✅ Done | 2 variants + constrained refiner prompt |
 | 12 | Python `__init__.py` files for all packages | ✅ Done | src/, nutrition/, models/, segmentation/, etc. |
 | 13 | `.gitkeep` files for empty directories | ✅ Done | Ensures Git tracks empty folders |
-| 14 | DVC initialized (`dvc init`) | ⏳ In Progress | Installing DVC... |
+| 14 | DVC initialized (`dvc init`) | ✅ Done | DVC initialized, initial commit made |
 
 ### Manual Tasks (Team must do)
 
