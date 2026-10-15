@@ -1,0 +1,66 @@
+# Plan
+ExplainedPlan.md
+Plan.md
+
+# Project Files
+MTE_Presentation.pptx
+Research_Paper_Progress_Report_1.docx
+Research_Paper_Draft_v0.1.docx
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Data (tracked by DVC)
+data/raw/khana/*.jpg
+data/raw/khana/*.png
+data/raw/weighed_photos/*.jpg
+data/raw/weighed_photos/*.png
+*.dvc/cache
+*.dvc/tmp
+
+# Model weights (large files)
+weights/*.pth
+weights/*.pt
+weights/*.onnx
+weights/*.h5
+
+# W&B
+wandb/
+
+# API keys
+.env
+.secrets
+
+# Node (frontend)
+node_modules/
+src/app/frontend/build/
+src/app/frontend/.next/
+
+# Logs
+*.log

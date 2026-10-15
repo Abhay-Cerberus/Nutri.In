@@ -1,0 +1,11 @@
+# IFCT 2017 Lookup Table
+# Source: Longvah et al. 2017, "Indian Food Composition Tables", 528 foods, >150 components
+# Extract only columns needed: energy, protein, carbs, fat per 100g raw
+#
+# Instructions:
+# 1. Download IFCT 2017 data
+# 2. Filter to ingredients used in recipes.json
+# 3. Extract: ifct_code, food_name, energy_kcal_per100g, protein_g_per100g, carbs_g_per100g, fat_g_per100g
+# 4. Save as CSV below
+
+ifct_code,food_name,energy_kcal_per100g,protein_g_per100g,carbs_g_per100g,fat_g_per100g

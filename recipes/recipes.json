@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "description": "Recipe table for ~30 Indian dishes. Each entry maps a dish to its ingredients with IFCT nutrient codes.",
+  "dishes": [
+    {
+      "dish_id": "example_rajma_curry",
+      "dish_name": "Rajma Curry",
+      "serving_units": {
+        "katori": 150,
+        "plate": 300
+      },
+      "ingredients": [
+        {
+          "name": "Rajma, dry",
+          "raw_g": 40,
+          "ifct_code": "B-xxx",
+          "kcal_per100g": 347,
+          "protein_per100g": 24.5,
+          "carbs_per100g": 60.5,
+          "fat_per100g": 1.3
+        }
+      ],
+      "raw_total_g": 78,
+      "cooked_total_g": 200,
+      "moisture_correction_factor": 0.91,
+      "source": "campus_mess_kitchen",
+      "confidence": "high",
+      "notes": "EXAMPLE ENTRY — replace with actual data"
+    }
+  ]
+}
