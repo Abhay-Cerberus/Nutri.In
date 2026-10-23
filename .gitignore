@@ -64,3 +64,6 @@ src/app/frontend/.next/
 
 # Logs
 *.log
+
+# Dataset - Khana
+data/raw/khana/*
