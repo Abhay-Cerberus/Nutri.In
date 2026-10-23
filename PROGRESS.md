@@ -1,7 +1,7 @@
 # 📊 Nutri.In — Progress Tracker
 
-> **Last updated:** 2026-10-16
-> **Current Phase:** Week 0 — Pre-Project Checklist
+> **Last updated:** 2026-10-24
+> **Current Phase:** Week 1 — Literature & Scope Lock
 
 ---
 
@@ -40,16 +40,16 @@
 
 ---
 
-## 📋 Week 1 — Stage 0: Literature & Scope Lock
+## ✅ Week 1 — Stage 0: Literature & Scope Lock
 
 | # | Task | Status | Owner | Notes |
 |---|------|--------|-------|-------|
-| 1 | Annotated bibliography (≥12 papers) | ❌ Not Started | All | One paragraph per paper: problem, method, dataset, metrics, result, limitation, what we borrow |
-| 2 | Freeze dish list in `SCOPE.md` (25–30 dishes) | ❌ Not Started | Data Lead | Intersect Khana classes × canteen × IFCT coverage |
-| 3 | Download Khana dataset + verify class overlap | ❌ Not Started | Models Lead | Verify 25–30 target dishes exist in Khana's 80 classes |
-| 4 | Download IFCT 2017 → extract `ifct_lookup.csv` | ❌ Not Started | Systems Lead | Extract energy, protein, carbs, fat per 100g |
-| 5 | Related work draft (~1.5 pages) | ❌ Not Started | All | Living document — grows as you read |
-| 6 | `SCOPE.md` committed with frozen dish list | ❌ Not Started | Data Lead | Changes after this week only by guide approval |
+| 1 | Annotated bibliography (≥12 papers) | ✅ Done | All | 14 papers annotated in `docs/papers/ANNOTATED_BIBLIOGRAPHY.md` |
+| 2 | Freeze dish list in `SCOPE.md` (30 dishes) | ✅ Done | Data Lead | 30 dishes selected: 8 curries, 4 rice/dal, 6 breads, 5 South Indian, 5 snacks, 2 kebabs |
+| 3 | Download Khana labels + verify class overlap | ✅ Done | Models Lead | Labels (80 classes) + taxonomy saved to `data/raw/khana/`. All 30 dishes verified in Khana |
+| 4 | Download IFCT 2017 → extract `ifct_lookup.csv` | ⏳ Partial | Systems Lead | Template ready. Team needs to populate with actual IFCT raw values for 30 dishes' ingredients |
+| 5 | Related work draft (~1.5 pages) | ✅ Done | All | `docs/papers/RELATED_WORK_DRAFT_v0.md` — covers recognition, portion est., LLM benchmarks |
+| 6 | `SCOPE.md` committed with frozen dish list | ✅ Done | Data Lead | Frozen 2026-10-24. Includes portion difficulty ratings + height-prior categories |
 
 ---
 
@@ -150,7 +150,7 @@
 | Phase | Status | Completion |
 |-------|--------|------------|
 | Week 0 — Pre-Project Setup | 🔧 In Progress | ~65% (automated done, manual tasks remaining) |
-| Week 1 — Literature & Scope | ❌ Not Started | 0% |
+| Week 1 — Literature & Scope | ✅ Mostly Done | ~90% (IFCT extraction needs team to populate) |
 | Weeks 2–3 — Nutrition Backbone | ❌ Not Started | 0% |
 | Weeks 3–5 — Weighed Photos | ❌ Not Started | 0% |
 | Weeks 5–7 — Dish Recognition | ❌ Not Started | 0% |
