@@ -1,7 +1,7 @@
 # 📊 Nutri.In — Progress Tracker
 
-> **Last updated:** 2026-10-24
-> **Current Phase:** Week 1 — Literature & Scope Lock
+> **Last updated:** 2026-10-28
+> **Current Phase:** Weeks 2–3 — Stage 1: Nutrition Backbone
 
 ---
 
@@ -47,7 +47,7 @@
 | 1 | Annotated bibliography (≥12 papers) | ✅ Done | All | 14 papers annotated in `docs/papers/ANNOTATED_BIBLIOGRAPHY.md` |
 | 2 | Freeze dish list in `SCOPE.md` (30 dishes) | ✅ Done | Data Lead | 30 dishes selected: 8 curries, 4 rice/dal, 6 breads, 5 South Indian, 5 snacks, 2 kebabs |
 | 3 | Download Khana labels + verify class overlap | ✅ Done | Models Lead | Labels (80 classes) + taxonomy saved to `data/raw/khana/`. All 30 dishes verified in Khana |
-| 4 | Download IFCT 2017 → extract `ifct_lookup.csv` | ⏳ Partial | Systems Lead | Template ready. Team needs to populate with actual IFCT raw values for 30 dishes' ingredients |
+| 4 | Download IFCT 2017 → extract `ifct_lookup.csv` | ⏳ Partial | Systems Lead | IFCT PDF is present locally; 31 ingredient rows have been transcribed from Table 1 and linked to PDF pages. Remaining non-IFCT ingredients and proxies are marked in `recipes.json` |
 | 5 | Related work draft (~1.5 pages) | ✅ Done | All | `docs/papers/RELATED_WORK_DRAFT_v0.md` — covers recognition, portion est., LLM benchmarks |
 | 6 | `SCOPE.md` committed with frozen dish list | ✅ Done | Data Lead | Frozen 2026-10-24. Includes portion difficulty ratings + height-prior categories |
 
@@ -57,13 +57,13 @@
 
 | # | Task | Status | Owner | Notes |
 |---|------|--------|-------|-------|
-| 1 | Recipe collection protocol documented | ❌ Not Started | Data Lead | Visit canteen/mess kitchen, photograph measuring cups |
-| 2 | Build `recipes.json` (≥25 dishes, sourced) | ❌ Not Started | Data Lead | Every entry needs source + confidence tag |
-| 3 | Extract IFCT values → `ifct_lookup.csv` | ❌ Not Started | Systems Lead | All ingredients from recipes |
-| 4 | Implement `nutrition.py` fully | ❌ Not Started | Systems Lead | Skeleton exists — fill with real data |
-| 5 | Sanity-check experiment | ❌ Not Started | Systems Lead | Compare vs IFCT cooked entries + MyFitnessPal |
-| 6 | Replicate Chiplonkar's method (3 dishes) | ❌ Not Started | Data Lead | Worked example for paper methods section |
-| 7 | Unit tests pass with real data | ❌ Not Started | Systems Lead | Known grams → known calories |
+| 1 | Recipe collection protocol documented | ✅ Done | Data Lead | Protocol written; actual canteen weighing and recipe sourcing remain team tasks |
+| 2 | Build `recipes.json` (≥25 dishes, sourced) | ⚠️ Partial | Data Lead | 30 draft entries exist; all quantities/yields are unmeasured and marked low confidence. Source/variant verification remains |
+| 3 | Extract IFCT values → `ifct_lookup.csv` | ⚠️ Partial | Systems Lead | 31 matched Table 1 entries transcribed from the local PDF with physical page references. Besan/rice flour use marked proxies; several ingredients have provisional non-IFCT overrides |
+| 4 | Implement `nutrition.py` fully | ✅ Done | Systems Lead | Uses the IFCT lookup, resolves marked overrides, applies cooked-yield scaling, checks invalid inputs, and labels provisional ingredients. Recipe accuracy is not validated |
+| 5 | Sanity-check experiment | ⚠️ Partial | Systems Lead | Runner and source-required reference template are ready; no comparison was run because verified cooked-food references have not been added |
+| 6 | Replicate Chiplonkar's method (3 dishes) | ⚠️ Partial | Data Lead | `src/nutrition/chiplonkar_method_demo.py` demonstrates moisture adjustment only; provisional recipe values mean this is not a study replication or validation |
+| 7 | Unit tests pass with real data | ⚠️ Partial | Systems Lead | 12 standard-library tests pass for lookup loading, calculation, and input checks. Project recipe inputs remain provisional; no measured recipe data has been tested |
 
 ---
 
@@ -150,8 +150,8 @@
 | Phase | Status | Completion |
 |-------|--------|------------|
 | Week 0 — Pre-Project Setup | 🔧 In Progress | ~65% (automated done, manual tasks remaining) |
-| Week 1 — Literature & Scope | ✅ Mostly Done | ~90% (IFCT extraction needs team to populate) |
-| Weeks 2–3 — Nutrition Backbone | ❌ Not Started | 0% |
+| Week 1 — Literature & Scope | ✅ Mostly Done | ~90% (literature/scope done; IFCT subset extracted, remaining ingredient entries need confirmation) |
+| Weeks 2–3 — Nutrition Backbone | ⚠️ In Progress | ~55% (engine and IFCT subset ready; recipe validation and sourced references remain) |
 | Weeks 3–5 — Weighed Photos | ❌ Not Started | 0% |
 | Weeks 5–7 — Dish Recognition | ❌ Not Started | 0% |
 | Weeks 7–10 — Portion Estimation | ❌ Not Started | 0% |

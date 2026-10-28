@@ -67,3 +67,6 @@ src/app/frontend/.next/
 
 # Dataset - Khana
 data/raw/khana/*
+
+# Raw Data
+/data/raw/ifct/IFCT 2017.pdf

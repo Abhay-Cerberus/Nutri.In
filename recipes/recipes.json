@@ -1,31 +1,1874 @@
 {
   "schema_version": "1.0",
-  "description": "Recipe table for ~30 Indian dishes. Each entry maps a dish to its ingredients with IFCT nutrient codes.",
+  "description": "Provisional recipe inputs for software integration. IFCT-coded ingredient values resolve from ifct_lookup.csv; recipe amounts and cooked yields are not yet measured.",
+  "notes": "All recipe ingredient quantities, cooked yields, and serving weights are draft estimates, not canteen-verified or weighed. Nutrient values for ingredients with an IFCT code come from IFCT 2017 Table 1; ingredients absent from that lookup use explicitly marked provisional overrides. Do not report these dish estimates as validated results.",
   "dishes": [
     {
-      "dish_id": "example_rajma_curry",
-      "dish_name": "Rajma Curry",
+      "dish_id": "aloo_gobi",
+      "dish_name": "Aloo Gobi",
       "serving_units": {
         "katori": 150,
+        "plate": 250
+      },
+      "ingredients": [
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 100,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Cauliflower",
+          "raw_g": 80,
+          "ifct_code": "D036"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 30,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 40,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 270,
+      "cooked_total_g": 220,
+      "moisture_correction_factor": 0.81,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Dry curry; water evaporates during cooking. Common canteen dish. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "aloo_mutter",
+      "dish_name": "Aloo Mutter",
+      "serving_units": {
+        "katori": 150,
+        "plate": 250
+      },
+      "ingredients": [
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 100,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Green peas",
+          "raw_g": 50,
+          "ifct_code": "D061"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 30,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 50,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Ginger",
+          "raw_g": 5,
+          "ifct_code": "G014"
+        },
+        {
+          "name": "Garlic",
+          "raw_g": 5,
+          "ifct_code": "G011"
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 260,
+      "cooked_total_g": 230,
+      "moisture_correction_factor": 0.88,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Gravy-based curry with potato and peas. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "palak_paneer",
+      "dish_name": "Palak Paneer",
+      "serving_units": {
+        "katori": 150,
+        "plate": 250
+      },
+      "ingredients": [
+        {
+          "name": "Spinach palak",
+          "raw_g": 150,
+          "ifct_code": "C033"
+        },
+        {
+          "name": "Paneer",
+          "raw_g": 60,
+          "ifct_code": "L003"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 30,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 30,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Cream",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 195.0,
+            "protein": 1.4,
+            "carbs": 2.9,
+            "fat": 20.0
+          },
+          "nutrition_source": "unverified estimate",
+          "source_note": "Placeholder cream profile; not sourced from IFCT 2017. Cream fat percentage and product type need confirmation."
+        },
+        {
+          "name": "Oil",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Garlic",
+          "raw_g": 5,
+          "ifct_code": "G011"
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 310,
+      "cooked_total_g": 220,
+      "moisture_correction_factor": 0.71,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Spinach puree with paneer cubes. Spinach loses significant water on cooking. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "paneer_masala",
+      "dish_name": "Paneer Masala",
+      "serving_units": {
+        "katori": 150,
+        "plate": 250
+      },
+      "ingredients": [
+        {
+          "name": "Paneer",
+          "raw_g": 80,
+          "ifct_code": "L003"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 40,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 60,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 20,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Cream",
+          "raw_g": 10,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 195.0,
+            "protein": 1.4,
+            "carbs": 2.9,
+            "fat": 20.0
+          },
+          "nutrition_source": "unverified estimate",
+          "source_note": "Placeholder cream profile; not sourced from IFCT 2017. Cream fat percentage and product type need confirmation."
+        },
+        {
+          "name": "Ginger",
+          "raw_g": 5,
+          "ifct_code": "G014"
+        },
+        {
+          "name": "Garlic",
+          "raw_g": 5,
+          "ifct_code": "G011"
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 225,
+      "cooked_total_g": 200,
+      "moisture_correction_factor": 0.89,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Rich tomato-onion gravy with paneer cubes. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "chana_masala",
+      "dish_name": "Chana Masala",
+      "serving_units": {
+        "katori": 150,
+        "plate": 250
+      },
+      "ingredients": [
+        {
+          "name": "Bengal gram whole chana",
+          "raw_g": 60,
+          "ifct_code": "B002"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 40,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 50,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Ginger",
+          "raw_g": 5,
+          "ifct_code": "G014"
+        },
+        {
+          "name": "Garlic",
+          "raw_g": 5,
+          "ifct_code": "G011"
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 180,
+      "cooked_total_g": 220,
+      "moisture_correction_factor": 1.22,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Chickpeas absorb water during soaking/cooking, increasing cooked weight. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "bhindi_masala",
+      "dish_name": "Bhindi Masala",
+      "serving_units": {
+        "katori": 150,
+        "plate": 200
+      },
+      "ingredients": [
+        {
+          "name": "Ladies finger bhindi",
+          "raw_g": 150,
+          "ifct_code": "D056"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 30,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 30,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 230,
+      "cooked_total_g": 180,
+      "moisture_correction_factor": 0.78,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Dry preparation; bhindi loses water when fried/sauteed. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "anda_curry",
+      "dish_name": "Anda Curry",
+      "serving_units": {
+        "katori": 150,
+        "plate": 250
+      },
+      "ingredients": [
+        {
+          "name": "Hen egg whole",
+          "raw_g": 120,
+          "ifct_code": "M001"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 40,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 50,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Ginger",
+          "raw_g": 5,
+          "ifct_code": "G014"
+        },
+        {
+          "name": "Garlic",
+          "raw_g": 5,
+          "ifct_code": "G011"
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 240,
+      "cooked_total_g": 220,
+      "moisture_correction_factor": 0.92,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "2 boiled eggs in onion-tomato gravy. 120g = ~2 eggs. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "fish_curry",
+      "dish_name": "Fish Curry",
+      "serving_units": {
+        "katori": 150,
+        "plate": 250
+      },
+      "ingredients": [
+        {
+          "name": "Fish rohu",
+          "raw_g": 100,
+          "ifct_code": "S006"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 40,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 40,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 20,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Garlic",
+          "raw_g": 5,
+          "ifct_code": "G011"
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 210,
+      "cooked_total_g": 230,
+      "moisture_correction_factor": 1.1,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Thin gravy fish curry with mustard oil. Water added for gravy. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "rajma_chawal",
+      "dish_name": "Rajma Chawal",
+      "serving_units": {
+        "katori": 200,
+        "plate": 350
+      },
+      "ingredients": [
+        {
+          "name": "Rajma kidney beans",
+          "raw_g": 50,
+          "ifct_code": "B019"
+        },
+        {
+          "name": "Rice raw milled",
+          "raw_g": 80,
+          "ifct_code": "A015"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 30,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 40,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 10,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Garlic",
+          "raw_g": 5,
+          "ifct_code": "G011"
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 220,
+      "cooked_total_g": 350,
+      "moisture_correction_factor": 1.59,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Combined dish: rajma gravy + steamed rice. Both absorb significant water. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "biryani",
+      "dish_name": "Biryani",
+      "serving_units": {
+        "plate": 300,
+        "half_plate": 150
+      },
+      "ingredients": [
+        {
+          "name": "Rice raw milled",
+          "raw_g": 100,
+          "ifct_code": "A015"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 40,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 30,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Curd yogurt",
+          "raw_g": 30,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 58.0,
+            "protein": 3.1,
+            "carbs": 3.0,
+            "fat": 4.3
+          },
+          "nutrition_source": "unverified estimate",
+          "source_note": "Placeholder whole-milk curd/yogurt profile; not sourced from IFCT 2017. Confirm local product and fat content."
+        },
+        {
+          "name": "Oil ghee",
+          "raw_g": 20,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 99.8
+          },
+          "nutrition_source": "generic fat estimate",
+          "source_note": "Working assumption: model this combined fat entry as 100% fat and 900 kcal/100 g. Split oil and ghee and verify the product/retained amount."
+        },
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 30,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Ginger",
+          "raw_g": 5,
+          "ifct_code": "G014"
+        },
+        {
+          "name": "Garlic",
+          "raw_g": 5,
+          "ifct_code": "G011"
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 8,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 268,
+      "cooked_total_g": 300,
+      "moisture_correction_factor": 1.12,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Veg biryani default. Rice absorbs water. Layered dum cooking. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "dal_khichdi",
+      "dish_name": "Dal Khichdi",
+      "serving_units": {
+        "katori": 200,
         "plate": 300
       },
       "ingredients": [
         {
-          "name": "Rajma, dry",
+          "name": "Rice raw milled",
+          "raw_g": 60,
+          "ifct_code": "A015"
+        },
+        {
+          "name": "Green gram dal moong dal",
+          "raw_g": 30,
+          "ifct_code": "B010"
+        },
+        {
+          "name": "Red gram dal toor dal",
+          "raw_g": 20,
+          "ifct_code": "B021"
+        },
+        {
+          "name": "Ghee",
+          "raw_g": 10,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 99.8
+          },
+          "nutrition_source": "generic fat estimate",
+          "source_note": "Working assumption: model ghee as 100% fat and 900 kcal/100 g. Replace with a product-specific source or label."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 125,
+      "cooked_total_g": 300,
+      "moisture_correction_factor": 2.4,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Very high water absorption - rice+dal cook into porridge-like consistency. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "navratan_korma",
+      "dish_name": "Navratan Korma",
+      "serving_units": {
+        "katori": 150,
+        "plate": 250
+      },
+      "ingredients": [
+        {
+          "name": "Paneer",
+          "raw_g": 30,
+          "ifct_code": "L003"
+        },
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 30,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Green peas",
+          "raw_g": 20,
+          "ifct_code": "D061"
+        },
+        {
+          "name": "Cauliflower",
+          "raw_g": 20,
+          "ifct_code": "D036"
+        },
+        {
+          "name": "Carrot",
+          "raw_g": 20,
+          "ifct_code": "F002"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 30,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 30,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Cream",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 195.0,
+            "protein": 1.4,
+            "carbs": 2.9,
+            "fat": 20.0
+          },
+          "nutrition_source": "unverified estimate",
+          "source_note": "Placeholder cream profile; not sourced from IFCT 2017. Cream fat percentage and product type need confirmation."
+        },
+        {
+          "name": "Oil",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 215,
+      "cooked_total_g": 200,
+      "moisture_correction_factor": 0.93,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Mixed vegetable korma with cream. Rich gravy. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "chapati",
+      "dish_name": "Chapati / Roti",
+      "serving_units": {
+        "piece": 35,
+        "two_pieces": 70
+      },
+      "ingredients": [
+        {
+          "name": "Wheat flour atta",
+          "raw_g": 30,
+          "ifct_code": "A019"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 2,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        }
+      ],
+      "raw_total_g": 32,
+      "cooked_total_g": 35,
+      "moisture_correction_factor": 1.09,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Per piece. ~30g atta + water = ~35g cooked roti. Simple, reliable recipe. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "aloo_paratha",
+      "dish_name": "Aloo Paratha",
+      "serving_units": {
+        "piece": 100,
+        "two_pieces": 200
+      },
+      "ingredients": [
+        {
+          "name": "Wheat flour atta",
           "raw_g": 40,
-          "ifct_code": "B-xxx",
-          "kcal_per100g": 347,
-          "protein_per100g": 24.5,
-          "carbs_per100g": 60.5,
-          "fat_per100g": 1.3
+          "ifct_code": "A019"
+        },
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 40,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Oil ghee",
+          "raw_g": 10,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 99.8
+          },
+          "nutrition_source": "generic fat estimate",
+          "source_note": "Working assumption: model this combined fat entry as 100% fat and 900 kcal/100 g. Split oil and ghee and verify the product/retained amount."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 3,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 93,
+      "cooked_total_g": 100,
+      "moisture_correction_factor": 1.08,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Per piece. Stuffed paratha with potato filling, shallow fried. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "chole_bhature",
+      "dish_name": "Chole Bhature",
+      "serving_units": {
+        "plate": 300,
+        "half_plate": 150
+      },
+      "ingredients": [
+        {
+          "name": "Bengal gram whole chana",
+          "raw_g": 60,
+          "ifct_code": "B002"
+        },
+        {
+          "name": "Wheat flour refined maida",
+          "raw_g": 50,
+          "ifct_code": "A018"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 30,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 30,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Oil for frying",
+          "raw_g": 25,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic frying oil as 100% fat and 900 kcal/100 g. The amount retained after frying is not measured."
+        },
+        {
+          "name": "Curd yogurt",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 58.0,
+            "protein": 3.1,
+            "carbs": 3.0,
+            "fat": 4.3
+          },
+          "nutrition_source": "unverified estimate",
+          "source_note": "Placeholder whole-milk curd/yogurt profile; not sourced from IFCT 2017. Confirm local product and fat content."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 215,
+      "cooked_total_g": 300,
+      "moisture_correction_factor": 1.4,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Deep-fried bhatura + chole curry. High oil absorption. Chana absorbs water. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "puri_bhaji",
+      "dish_name": "Puri Bhaji",
+      "serving_units": {
+        "plate": 250,
+        "two_puri_bhaji": 250
+      },
+      "ingredients": [
+        {
+          "name": "Wheat flour atta",
+          "raw_g": 40,
+          "ifct_code": "A019"
+        },
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 80,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 20,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Oil for frying",
+          "raw_g": 20,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic frying oil as 100% fat and 900 kcal/100 g. The amount retained after frying is not measured."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 165,
+      "cooked_total_g": 250,
+      "moisture_correction_factor": 1.52,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "2 deep-fried puris + aloo bhaji (potato curry). Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "garlic_naan",
+      "dish_name": "Garlic Naan",
+      "serving_units": {
+        "piece": 80,
+        "two_pieces": 160
+      },
+      "ingredients": [
+        {
+          "name": "Wheat flour refined maida",
+          "raw_g": 50,
+          "ifct_code": "A018"
+        },
+        {
+          "name": "Curd yogurt",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 58.0,
+            "protein": 3.1,
+            "carbs": 3.0,
+            "fat": 4.3
+          },
+          "nutrition_source": "unverified estimate",
+          "source_note": "Placeholder whole-milk curd/yogurt profile; not sourced from IFCT 2017. Confirm local product and fat content."
+        },
+        {
+          "name": "Butter",
+          "raw_g": 8,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 717.0,
+            "protein": 0.85,
+            "carbs": 0.06,
+            "fat": 81.11
+          },
+          "nutrition_source": "unverified estimate",
+          "source_note": "Placeholder butter profile; not sourced from IFCT 2017. Confirm the product and replace with a verified Indian food-composition or label value."
+        },
+        {
+          "name": "Garlic",
+          "raw_g": 5,
+          "ifct_code": "G011"
         }
       ],
       "raw_total_g": 78,
+      "cooked_total_g": 80,
+      "moisture_correction_factor": 1.03,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Per piece. Tandoor-baked naan with garlic and butter. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "amritsari_kulcha",
+      "dish_name": "Amritsari Kulcha",
+      "serving_units": {
+        "piece": 100,
+        "two_pieces": 200
+      },
+      "ingredients": [
+        {
+          "name": "Wheat flour refined maida",
+          "raw_g": 50,
+          "ifct_code": "A018"
+        },
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 30,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 10,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Butter",
+          "raw_g": 10,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 717.0,
+            "protein": 0.85,
+            "carbs": 0.06,
+            "fat": 81.11
+          },
+          "nutrition_source": "unverified estimate",
+          "source_note": "Placeholder butter profile; not sourced from IFCT 2017. Confirm the product and replace with a verified Indian food-composition or label value."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 3,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 103,
+      "cooked_total_g": 100,
+      "moisture_correction_factor": 0.97,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Stuffed kulcha with potato-onion filling, baked in tandoor with butter. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "masala_dosa",
+      "dish_name": "Masala Dosa",
+      "serving_units": {
+        "piece": 180,
+        "plate": 180
+      },
+      "ingredients": [
+        {
+          "name": "Rice raw milled",
+          "raw_g": 40,
+          "ifct_code": "A015"
+        },
+        {
+          "name": "Black gram dal urad dal",
+          "raw_g": 15,
+          "ifct_code": "B003"
+        },
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 60,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 20,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 10,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Mustard seeds",
+          "raw_g": 2,
+          "ifct_code": "H013"
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 3,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 150,
+      "cooked_total_g": 180,
+      "moisture_correction_factor": 1.2,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Fermented rice-urad batter crepe with potato masala filling. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "idli",
+      "dish_name": "Idli",
+      "serving_units": {
+        "piece": 40,
+        "three_pieces": 120
+      },
+      "ingredients": [
+        {
+          "name": "Rice raw milled",
+          "raw_g": 25,
+          "ifct_code": "A015"
+        },
+        {
+          "name": "Black gram dal urad dal",
+          "raw_g": 10,
+          "ifct_code": "B003"
+        }
+      ],
+      "raw_total_g": 35,
+      "cooked_total_g": 40,
+      "moisture_correction_factor": 1.14,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Per piece. Steamed fermented rice-urad cake. Simple 3:1 rice:urad ratio. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "medu_vada",
+      "dish_name": "Medu Vada",
+      "serving_units": {
+        "piece": 50,
+        "two_pieces": 100
+      },
+      "ingredients": [
+        {
+          "name": "Black gram dal urad dal",
+          "raw_g": 30,
+          "ifct_code": "B003"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 5,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Oil for frying",
+          "raw_g": 10,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic frying oil as 100% fat and 900 kcal/100 g. The amount retained after frying is not measured."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 2,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 47,
+      "cooked_total_g": 50,
+      "moisture_correction_factor": 1.06,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Per piece. Deep-fried urad dal doughnut. Oil absorption ~10g per piece. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "uttapam",
+      "dish_name": "Uttapam",
+      "serving_units": {
+        "piece": 120,
+        "plate": 120
+      },
+      "ingredients": [
+        {
+          "name": "Rice raw milled",
+          "raw_g": 40,
+          "ifct_code": "A015"
+        },
+        {
+          "name": "Black gram dal urad dal",
+          "raw_g": 15,
+          "ifct_code": "B003"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 15,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 10,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 8,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        }
+      ],
+      "raw_total_g": 88,
+      "cooked_total_g": 120,
+      "moisture_correction_factor": 1.36,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Thick dosa-like pancake topped with onion and tomato. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "poha",
+      "dish_name": "Poha",
+      "serving_units": {
+        "plate": 200,
+        "katori": 150
+      },
+      "ingredients": [
+        {
+          "name": "Rice flakes poha",
+          "raw_g": 60,
+          "ifct_code": "A011"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 30,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 30,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Green peas",
+          "raw_g": 15,
+          "ifct_code": "D061"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 10,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Mustard seeds",
+          "raw_g": 2,
+          "ifct_code": "H013"
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 3,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 150,
       "cooked_total_g": 200,
-      "moisture_correction_factor": 0.91,
-      "source": "campus_mess_kitchen",
-      "confidence": "high",
-      "notes": "EXAMPLE ENTRY — replace with actual data"
+      "moisture_correction_factor": 1.33,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Flattened rice soaked in water, then tempered with peanuts, onion, potato. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "samosa",
+      "dish_name": "Samosa",
+      "serving_units": {
+        "piece": 60,
+        "two_pieces": 120
+      },
+      "ingredients": [
+        {
+          "name": "Wheat flour refined maida",
+          "raw_g": 20,
+          "ifct_code": "A018"
+        },
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 30,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Green peas",
+          "raw_g": 10,
+          "ifct_code": "D061"
+        },
+        {
+          "name": "Oil for frying",
+          "raw_g": 12,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic frying oil as 100% fat and 900 kcal/100 g. The amount retained after frying is not measured."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 3,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 75,
+      "cooked_total_g": 60,
+      "moisture_correction_factor": 0.8,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Per piece. Deep-fried pastry with spiced potato-peas filling. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "vada_pav",
+      "dish_name": "Vada Pav",
+      "serving_units": {
+        "piece": 130,
+        "plate": 130
+      },
+      "ingredients": [
+        {
+          "name": "Wheat flour refined maida",
+          "raw_g": 30,
+          "ifct_code": "A018"
+        },
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 50,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Besan gram flour",
+          "raw_g": 15,
+          "ifct_code": "B001",
+          "source_note": "Proxy: IFCT B001 Bengal gram dal used for besan; a separate besan row was not located in the checked Table 1 subset."
+        },
+        {
+          "name": "Oil for frying",
+          "raw_g": 15,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic frying oil as 100% fat and 900 kcal/100 g. The amount retained after frying is not measured."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 3,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 113,
+      "cooked_total_g": 130,
+      "moisture_correction_factor": 1.15,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Per piece. Pav bread + deep-fried spiced potato vada. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "pav_bhaji",
+      "dish_name": "Pav Bhaji",
+      "serving_units": {
+        "plate": 300,
+        "half_plate": 150
+      },
+      "ingredients": [
+        {
+          "name": "Wheat flour refined maida",
+          "raw_g": 50,
+          "ifct_code": "A018"
+        },
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 60,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Cauliflower",
+          "raw_g": 20,
+          "ifct_code": "D036"
+        },
+        {
+          "name": "Green peas",
+          "raw_g": 15,
+          "ifct_code": "D061"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 20,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Tomato",
+          "raw_g": 30,
+          "ifct_code": "D075"
+        },
+        {
+          "name": "Butter",
+          "raw_g": 20,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 717.0,
+            "protein": 0.85,
+            "carbs": 0.06,
+            "fat": 81.11
+          },
+          "nutrition_source": "unverified estimate",
+          "source_note": "Placeholder butter profile; not sourced from IFCT 2017. Confirm the product and replace with a verified Indian food-composition or label value."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 220,
+      "cooked_total_g": 300,
+      "moisture_correction_factor": 1.36,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "2 buttered pav + mashed vegetable bhaji. Butter-heavy dish. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "dhokla",
+      "dish_name": "Dhokla",
+      "serving_units": {
+        "piece": 30,
+        "four_pieces": 120
+      },
+      "ingredients": [
+        {
+          "name": "Besan gram flour",
+          "raw_g": 25,
+          "ifct_code": "B001",
+          "source_note": "Proxy: IFCT B001 Bengal gram dal used for besan; a separate besan row was not located in the checked Table 1 subset."
+        },
+        {
+          "name": "Curd yogurt",
+          "raw_g": 10,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 58.0,
+            "protein": 3.1,
+            "carbs": 3.0,
+            "fat": 4.3
+          },
+          "nutrition_source": "unverified estimate",
+          "source_note": "Placeholder whole-milk curd/yogurt profile; not sourced from IFCT 2017. Confirm local product and fat content."
+        },
+        {
+          "name": "Oil",
+          "raw_g": 3,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Sugar",
+          "raw_g": 3,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 400.0,
+            "protein": 0.0,
+            "carbs": 100.0,
+            "fat": 0.0
+          },
+          "nutrition_source": "pure sugar assumption",
+          "source_note": "Modelled as pure carbohydrate at 4 kcal/g. Replace with a verified value for the ingredient used."
+        }
+      ],
+      "raw_total_g": 41,
+      "cooked_total_g": 30,
+      "moisture_correction_factor": 0.73,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Per piece. Steamed gram flour cake. Light and spongy. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "onion_pakoda",
+      "dish_name": "Onion Pakoda",
+      "serving_units": {
+        "plate": 100,
+        "katori": 80
+      },
+      "ingredients": [
+        {
+          "name": "Besan gram flour",
+          "raw_g": 30,
+          "ifct_code": "B001",
+          "source_note": "Proxy: IFCT B001 Bengal gram dal used for besan; a separate besan row was not located in the checked Table 1 subset."
+        },
+        {
+          "name": "Onion",
+          "raw_g": 50,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Oil for frying",
+          "raw_g": 20,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic frying oil as 100% fat and 900 kcal/100 g. The amount retained after frying is not measured."
+        },
+        {
+          "name": "Rice flour",
+          "raw_g": 5,
+          "ifct_code": "A015",
+          "source_note": "Proxy: IFCT A015 raw milled rice used; rice flour was not located as a separate row in the checked Table 1 subset."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 3,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 108,
+      "cooked_total_g": 100,
+      "moisture_correction_factor": 0.93,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Deep-fried besan-coated onion fritters. High oil absorption. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "seekh_kebab",
+      "dish_name": "Seekh Kebab",
+      "serving_units": {
+        "piece": 40,
+        "three_pieces": 120
+      },
+      "ingredients": [
+        {
+          "name": "Chicken breast",
+          "raw_g": 50,
+          "ifct_code": "N003"
+        },
+        {
+          "name": "Onion",
+          "raw_g": 10,
+          "ifct_code": "G017"
+        },
+        {
+          "name": "Oil",
+          "raw_g": 5,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic cooking oil as 100% fat and 900 kcal/100 g. Oil type, brand, and absorbed/discarded frying oil are not measured."
+        },
+        {
+          "name": "Ginger",
+          "raw_g": 3,
+          "ifct_code": "G014"
+        },
+        {
+          "name": "Garlic",
+          "raw_g": 3,
+          "ifct_code": "G011"
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 3,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 74,
+      "cooked_total_g": 40,
+      "moisture_correction_factor": 0.54,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Per piece. Minced chicken skewer, grilled. Significant moisture loss. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
+    },
+    {
+      "dish_id": "hara_bhara_kabab",
+      "dish_name": "Hara Bhara Kabab",
+      "serving_units": {
+        "piece": 40,
+        "three_pieces": 120
+      },
+      "ingredients": [
+        {
+          "name": "Spinach palak",
+          "raw_g": 30,
+          "ifct_code": "C033"
+        },
+        {
+          "name": "Green peas",
+          "raw_g": 15,
+          "ifct_code": "D061"
+        },
+        {
+          "name": "Potato, brown skin",
+          "raw_g": 20,
+          "ifct_code": "F006"
+        },
+        {
+          "name": "Besan gram flour",
+          "raw_g": 5,
+          "ifct_code": "B001",
+          "source_note": "Proxy: IFCT B001 Bengal gram dal used for besan; a separate besan row was not located in the checked Table 1 subset."
+        },
+        {
+          "name": "Oil for frying",
+          "raw_g": 8,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 900.0,
+            "protein": 0.0,
+            "carbs": 0.0,
+            "fat": 100.0
+          },
+          "nutrition_source": "generic edible oil estimate",
+          "source_note": "Working assumption: model generic frying oil as 100% fat and 900 kcal/100 g. The amount retained after frying is not measured."
+        },
+        {
+          "name": "Spice mix",
+          "raw_g": 3,
+          "ifct_code": null,
+          "nutrition_per100g": {
+            "kcal": 300.0,
+            "protein": 10.0,
+            "carbs": 40.0,
+            "fat": 10.0
+          },
+          "nutrition_source": "unverified composite estimate",
+          "source_note": "Unverified composite placeholder for several spices. Ingredient proportions and exact composition are unknown; replace with weighed component spices."
+        }
+      ],
+      "raw_total_g": 81,
+      "cooked_total_g": 40,
+      "moisture_correction_factor": 0.49,
+      "source": "provisional_recipe_estimate",
+      "confidence": "low",
+      "notes": "Per piece. Shallow-fried spinach-peas patty. Significant moisture loss from spinach. Draft ingredient amounts and cooked yield are unmeasured; use for software smoke checks only."
     }
-  ]
+  ],
+  "data_status": "provisional_unverified"
 }

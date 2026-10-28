@@ -1,11 +1,37 @@
-# IFCT 2017 Lookup Table
-# Source: Longvah et al. 2017, "Indian Food Composition Tables", 528 foods, >150 components
-# Extract only columns needed: energy, protein, carbs, fat per 100g raw
-#
-# Instructions:
-# 1. Download IFCT 2017 data
-# 2. Filter to ingredients used in recipes.json
-# 3. Extract: ifct_code, food_name, energy_kcal_per100g, protein_g_per100g, carbs_g_per100g, fat_g_per100g
-# 4. Save as CSV below
-
-ifct_code,food_name,energy_kcal_per100g,protein_g_per100g,carbs_g_per100g,fat_g_per100g
+# Source: Longvah et al., Indian Food Composition Tables 2017, IFCT Table 1.
+# Mean values per 100 g edible portion, transcribed from the provided IFCT PDF.
+# carbs_g_per100g uses the table's CHOAVLDF (available carbohydrate) column.
+# energy_kcal_per100g = ENERC (kJ) / 4.184, rounded to 0.1 kcal.
+# pdf_page is the physical page number in data/raw/ifct/IFCT 2017.pdf.
+ifct_code,food_name,energy_kj_per100g,energy_kcal_per100g,protein_g_per100g,carbs_g_per100g,fat_g_per100g,source,pdf_page
+A011,Rice flakes,1480,353.7,7.44,76.75,1.14,IFCT 2017 Table 1,41
+A015,"Rice, raw, milled",1491,356.4,7.94,78.24,0.52,IFCT 2017 Table 1,41
+A018,"Wheat flour, refined",1472,351.8,10.36,74.27,0.76,IFCT 2017 Table 1,41
+A019,"Wheat flour, atta",1340,320.3,10.57,64.17,1.53,IFCT 2017 Table 1,42
+A022,"Wheat, semolina",1396,333.7,11.38,68.43,0.74,IFCT 2017 Table 1,42
+B001,"Bengal gram, dal",1377,329.1,21.55,46.72,5.31,IFCT 2017 Table 1,42
+B002,"Bengal gram, whole",1201,287.0,18.77,39.56,5.11,IFCT 2017 Table 1,42
+B003,"Black gram, dal",1356,324.1,23.06,51.00,1.69,IFCT 2017 Table 1,42
+B010,"Green gram, dal",1363,325.8,23.88,52.59,1.35,IFCT 2017 Table 1,42
+B019,"Rajmah, brown",1245,297.6,19.50,48.83,1.68,IFCT 2017 Table 1,43
+B021,"Red gram, dal",1384,330.8,21.70,55.23,1.56,IFCT 2017 Table 1,43
+C020,"Fenugreek leaves",144,34.4,3.68,2.17,0.83,IFCT 2017 Table 1,44
+C033,Spinach,102,24.4,2.14,2.05,0.64,IFCT 2017 Table 1,45
+D036,Cauliflower,96,22.9,2.15,2.03,0.44,IFCT 2017 Table 1,47
+D056,"Ladies finger",115,27.5,2.08,3.62,0.22,IFCT 2017 Table 1,48
+D061,"Peas, fresh",340,81.3,7.25,11.88,0.13,IFCT 2017 Table 1,48
+D075,"Tomato, ripe, hybrid",79,18.9,0.76,3.20,0.25,IFCT 2017 Table 1,48
+F002,"Carrot, orange",139,33.2,0.95,5.55,0.47,IFCT 2017 Table 1,52
+F006,"Potato, brown skin, big",292,69.8,1.54,14.89,0.23,IFCT 2017 Table 1,52
+G011,"Garlic, big clove",518,123.8,6.92,21.93,0.16,IFCT 2017 Table 1,54
+G014,"Ginger, fresh",230,55.0,2.22,8.97,0.85,IFCT 2017 Table 1,54
+G017,"Onion, big",201,48.0,1.50,9.56,0.24,IFCT 2017 Table 1,54
+G022,"Chillies, red",990,236.6,12.69,29.46,6.40,IFCT 2017 Table 1,54
+G024,"Coriander seeds",1125,268.9,10.66,12.98,17.47,IFCT 2017 Table 1,54
+G025,"Cumin seeds",1274,304.5,13.91,22.62,16.64,IFCT 2017 Table 1,54
+G033,"Turmeric powder",1174,280.6,7.66,49.22,5.03,IFCT 2017 Table 1,55
+H013,"Mustard seeds",2132,509.6,19.51,16.80,40.19,IFCT 2017 Table 1,55
+L003,Panner,1079,257.9,18.86,12.41,14.78,IFCT 2017 Table 1,57
+M001,"Egg, poultry, whole, raw",564,134.8,13.28,0.00,9.15,IFCT 2017 Table 1,58
+N003,"Chicken, poultry, breast, skinless",704,168.3,21.81,0.00,9.00,IFCT 2017 Table 1,58
+S006,"Rohu",428,102.3,19.71,0.00,2.39,IFCT 2017 Table 1,68

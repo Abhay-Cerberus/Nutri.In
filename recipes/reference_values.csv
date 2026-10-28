@@ -1,0 +1,4 @@
+# Add one row per cooked-food reference only after checking the value directly.
+# Record source and reference_url so the comparison can be reproduced.
+# Values must be kcal per 100 g cooked and should match the recipe variant as closely as possible.
+dish_id,kcal_per100g,source,reference_url,notes
